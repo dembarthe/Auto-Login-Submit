@@ -1,0 +1,8 @@
+services:
+  build:
+    build: .
+    # Sources are mounted so a rebuild needs no image rebuild; output lands in ./dist
+    volumes:
+      - ./src:/app/src:ro
+      - ./scripts:/app/scripts:ro
+      - ./dist:/app/dist
